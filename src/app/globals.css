@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { -webkit-text-size-adjust: 100%; }
+body { background: #F4F1EC; color: #231F20; }
+
+/* 16px+ inputs prevent iOS zoom on focus */
+input, textarea, select { font-size: 16px; }
+textarea::placeholder, input::placeholder { color: #6B6566; opacity: 0.55; letter-spacing: 0.04em; }
+
+@layer components {
+  .field { @apply w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-ahf-charcoal outline-none transition focus:border-ahf-red focus:ring-2 focus:ring-ahf-red/20; }
+  .btn-primary { @apply inline-flex items-center justify-center rounded-xl bg-ahf-red px-5 py-3.5 font-semibold tracking-wide text-white transition hover:bg-ahf-redDark active:scale-[.99] disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-secondary { @apply inline-flex items-center justify-center rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm font-medium text-ahf-charcoal transition hover:bg-stone-50 disabled:opacity-60; }
+  .err { @apply mt-1.5 text-sm text-ahf-red; }
+}
